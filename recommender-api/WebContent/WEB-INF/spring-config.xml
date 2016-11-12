@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+      http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+      
+       <context:property-placeholder location="classpath:hibernate/hibernate.properties" /> 
+     
+      
+	<bean id="hibernateProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="location">
+			<value>classpath:hibernate/hibernate.properties</value>
+<!-- 				<value>/WEB-INF/hibernate.properties</value> -->
+				
+		</property>
+	</bean>
+
+	<!-- Service transaction mappings -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="packagesToScan">
+			<list>
+				<value>org.exp.entity</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<ref bean="hibernateProperties" />
+		</property>
+	</bean>
+
+	<!-- HikariCP configuration -->
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<constructor-arg>
+			<props>
+				<prop key="username">${hibernate.hikari.dataSource.user}</prop>
+				<prop key="password">${hibernate.hikari.dataSource.password}</prop>
+				<prop key="driverClassName">${hibernate.hikari.driverClassName}</prop>
+				<prop key="jdbcUrl">${hibernate.hikari.jdbcUrl}</prop>
+			</props>
+		</constructor-arg>
+	</bean>
+
+	<!-- HikariCP configuration -->
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
+		destroy-method="close">
+		<constructor-arg ref="hikariConfig" />
+	</bean>
+	
+<!-- Transaction -->
+<!-- <bean id="transactionManager" -->
+<!-- class="org.springframework.orm.hibernate4.HibernateTransactionManager"> -->
+<!-- <property name="sessionFactory" ref="sessionFactory" /> -->
+<!-- </bean> -->
+
+<!-- <tx:annotation-driven transaction-manager="transactionManager" />  -->
+
+	<bean id="persistenceExceptionTranslationPostProcessor"
+		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+</beans>
