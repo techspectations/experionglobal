@@ -1,0 +1,142 @@
+// Color variables (appears count calculates by raw css)
+@color0: #ffffff; // Appears 9 times
+@color1: #e64b3b; // Appears 4 times
+@color2: #db3b2b; // Appears 4 times
+@color3: #d14d42; // Appears 3 times
+
+
+
+body {
+	background:#efefef;
+}
+.form-body {
+	background:@color0;
+	padding:20px;
+}
+.login-form {
+	background:rgba(255,255,255,0.8);
+	border-top:3px solid#3e4043;
+	padding:20px;
+}
+.innter-form {
+	padding-top:20px;
+}
+.final-login {
+	li {
+		width:50%;
+	}
+}
+.nav-tabs {
+	border-bottom: none !important;
+}
+.nav-tabs>li {
+	color:#222222 !important;
+}
+.nav-tabs>li.active>a {
+	background-color: @color3;
+	border-bottom-color: transparent;
+	border-radius:none !important;
+	border: none !important;
+	color: @color0;
+	&:hover {
+		background-color: @color3;
+		border-bottom-color: transparent;
+		border-radius:none !important;
+		border: none !important;
+		color: @color0;
+	}
+	&:focus {
+		background-color: @color3;
+		border-bottom-color: transparent;
+		border-radius:none !important;
+		border: none !important;
+		color: @color0;
+	}
+}
+.nav-tabs>li>a {
+	border-radius:none !important;
+	border: none !important;
+	font-size:16px;
+	line-height: 1.428571429;
+	margin-right: 2px;
+	text-transform:uppercase;
+}
+.social-login {
+	font-size:12px;
+	text-align:center;
+	p {
+		margin:15px 0;
+	}
+	ul {
+		list-style-type:none;
+		margin:0;
+		padding:0;
+		li {
+			clear:fix;
+			float:left;
+			width:33%;
+			a {
+				color:@color0;
+				display:block;
+				font-size:13px;
+				padding:10px 0;
+				text-decoration:none;
+			}
+			&:nth-child(1) {
+				a {
+					background:#3b5998;
+				}
+			}
+			&:nth-child(2) {
+				a {
+					background:#e74c3d;
+				}
+			}
+			&:nth-child(3) {
+				a {
+					background:#3698d9;
+				}
+			}
+		}
+	}
+}
+.sa-innate-form input[type=text], input[type=password], input[type=file], textarea, select, email {
+	border:1px solid#cccccc;
+	font-size:13px;
+	margin:8px 0;
+	outline:none;
+	padding:10px;
+	width:100%;
+}
+.sa-innate-form {
+	input[type=submit] {
+		background:@color1;
+		border:1px solid@color1;
+		color:@color0;
+		font-size:14px;
+		margin-top:5px;
+		padding:10px 25px;
+		&:hover {
+			background:@color2;
+			border:1px solid@color2;
+			color:@color0;
+		}
+	}
+	button {
+		background:@color1;
+		border:1px solid@color1;
+		color:@color0;
+		font-size:14px;
+		margin-top:5px;
+		padding:10px 25px;
+		&:hover {
+			background:@color2;
+			border:1px solid@color2;
+			color:@color0;
+		}
+	}
+	p {
+		font-size:13px;
+		padding-top:10px;
+	}
+}

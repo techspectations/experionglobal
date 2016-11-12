@@ -1,0 +1,9 @@
+<div class="col-md-12 per_news red"> 
+    <h3 ng-bind="at.article.title"></h3>
+    <img ng-src="{{at.article.imgWeb}}" width="100%" height="auto" class="image_top_pad">
+    <h4 ng-bind="at.article.imageDescription"></h4>
+    <br><br>
+    <p>{{at.article.content}}</p>
+    <br><br>
+    <input-stars max="5" ng-model="rate.property"></input-stars>
+</div>
