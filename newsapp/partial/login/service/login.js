@@ -6,7 +6,7 @@ angular.module('newsapp').factory('login',function($q, $http) {
         var deferred = $q.defer();
         $http({
             method: 'POST',
-            url: 'http://localhost:8080/recommender/app/login',
+            url: 'http://52.66.159.145:8080/recommender/app/login',
             headers: formData
         }).success(function(data, status, headers, config) {
             deferred.resolve(data);

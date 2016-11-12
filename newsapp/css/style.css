@@ -1,7 +1,9 @@
+body{
+  overflow-x: hidden;
+}
+
 .log{
-	background-image:url(../images/log.jpg);
-	background-position: center;
-	background-size: cover;
+
 	font-family:'Open Sans', sans-serif;
 	
 }
@@ -10,18 +12,21 @@
 	background-position: center;
 	background-size: cover;
 	font-family:'Open Sans', sans-serif;
+  color:#fff;
 	
 }
 .login_content{
-	width:450px;
-	height: 300px;
-	position: relative;
-	color: #000;
+
+    width: 450px;
+    height: 300px;
+    position: relative;
+    color: #fff;
     left: 34%;
     margin-top: 10%;
-    background-color: rgba(255, 255, 255, 0.43);
+    background-color: rgb(95, 95, 95);
     border-radius: 15px;
-}
+  }
+
 .inner_login_1{
 	position: relative;
 	left:90px;
@@ -37,43 +42,54 @@
 	position: relative;
 	left:15px;
 }
+.repeat_news{
+  float: left;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  padding-top: 15px;
+}
+
+.repeat_news:first-child {
+  
+}
 
 
-
-
-/* Remove margins and padding from the list, and add a black background color */
 ul.topnav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: rgba(6, 94, 123, 0.8);
+    height: 54px;
 }
 
-/* Float the list items side by side */
 ul.topnav li {float: left;}
 
-/* Style the links inside the list items */
 ul.topnav li a {
     display: inline-block;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    transition: 0.3s;
+    transition: all .3s ease-in-out;
     font-size: 17px;
+    border-radius: 10px;
 }
 
-/* Change background color of links on hover */
-ul.topnav li a:hover {background-color: #f00;}
+ul.topnav li a:hover {
+background-color: #fff;
+font-size: 17px;
+color: #323232;
+transform: scale(1.1);
+}
 
-/* Hide the list item that contains the link that should open and close the topnav on small screens */
 ul.topnav li.icon {display: none;}
 
 
 
 
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
 @media screen and (max-width:680px) {
   ul.topnav li:not(:first-child) {display: none;}
   ul.topnav li.icon {
@@ -82,7 +98,6 @@ ul.topnav li.icon {display: none;}
   }
 }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
 @media screen and (max-width:680px) {
   ul.topnav.responsive {position: relative;}
   ul.topnav.responsive li.icon {
@@ -102,16 +117,85 @@ ul.topnav li.icon {display: none;}
 
 
 .red{
-	background-color: #d0d0d0;
+	background-color: rgba(49, 112, 143, 0.79);
     min-height: 100px;
-    margin: 15px;
     border-radius: 10px;
+    padding: 0px 15px 15px 15px;
+    transition: all .18s ease-in-out;
+    color: #fff;
+    
 }
+
+.red p{
+  padding-top: 10px;
+}
+
 .image_top_pad{
 	padding-top: 15px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .admin_area{
 	margin-left: 5%;
     margin-top: 5%;
+}
+
+ .padd_in{
+  margin-top: 15px;
+}
+ .red:hover{
+  transform: scale(1.035);
+
+ }
+ 
+ .search_in{
+      padding-top: 10px;
+ }
+ .search_gly{
+    padding-top: 20px;
+    padding-left: 15px;
+ }
+ @media screen and (max-width:1100px) {
+
+.search_in{
+      visibility: hidden;
+ }
+.search_gly{
+    visibility: hidden;
+ }
+
+
+
+ }
+
+ .repeat_news_small{
+  float: left;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  padding-top: 15px;
+}
+
+
+
+.personal_news{
+
+    border-right-color: rgba(50, 50, 50, 0.42);
+    border-right-style: solid;
+    border-right-width: 1px;
+    margin-top: 15px;
+}
+.search_button{
+    position: relative;
+    top: 10px;
+}
+.red_botton{
+  background-color: #f00;
+}
+.pad_lef_30{
+  margin-left: 30px;
 }

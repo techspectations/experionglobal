@@ -4,7 +4,7 @@ angular.module('newsapp', ['ui.bootstrap', 'ui.router', 'ngAnimate', 'angular-in
 angular.module('newsapp').factory('httpRequestInterceptor', function () {
   return {
     request: function (config) {
-      config.headers['Authorization'] = '<manorama_api_key>';
+      config.headers['Authorization'] = 'eca7290f-248f-53e1-aee1-c8b651533e54';
       config.headers['Accept'] = 'application/json;odata=verbose';
       return config;
     }

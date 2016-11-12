@@ -9,9 +9,13 @@
     <li><a ui-sref="home.companies">Companies</a></li>
     <li><a ui-sref="home.gadgets">Gadgets</a></li>
     <li><a ui-sref="login">Login</a></li>
+    <li class="search_in"><input class="form-control search_content" id="inputdefault" type="text" placeholder="Search"></li>
+    <li><img src="img/search.png" width="40px" height="37px" class="search_button"></li>
+    <li><img src="img/exit.png" width="27px" height="25px" class="search_button" style="position:relative; top:15px;" ng-click="lg.logout()" ></li>
     <li class="icon"> <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a> </li>
   </div>
 </ul>
 <div class="container" ui-view>
 
 </div>
+

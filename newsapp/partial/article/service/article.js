@@ -20,7 +20,7 @@ angular.module('newsapp').factory('article',function($q, $http) {
         $http({
             method: 'PUT',
             'Content-Type': 'application/json',
-            url: 'http://localhost:8080/recommender/app/update-rate',
+            url: 'http://52.66.159.145:8080/recommender/app/update-rate',
             data: data
         }).success(function(data, status, headers, config) {
             deferred.resolve(data);
