@@ -1,0 +1,114 @@
+------------------------------Creating News Nodes---------------------------------------------
+
+CREATE (m1:Media1{id:"eadf4f8d1060b2c3f48e8eeb7f15389d",title:"Google beats human champion in toughest-ever Chinese game",articleURL: "https://developer.manoramaonline.com/api/editions/en/articles/eadf4f8d1060b2c3f48e8eeb7f15389d",lastModified: "Thursday , January 28 2016 18:06"})
+
+CREATE (m2:Media2{id:"5bd870140f44c620dc7a58b3a92bc7e3",title:"Google, Facebook move toward automatic blocking of extremist videos",articleURL: "https://developer.manoramaonline.com/api/editions/en/articles/5bd870140f44c620dc7a58b3a92bc7e3",lastModified: "Sunday , June 26 2016 18:10"})
+
+CREATE (m3:Media3{id:"d013e30578237f018edfdb4de7e516c0",title:"The joke's on us, says Google; pulls back the MicDrop feature",articleURL: "https://developer.manoramaonline.com/api/editions/en/articles/d013e30578237f018edfdb4de7e516c0",lastModified: "Friday , April 01 2016 17:08"})
+
+CREATE (m4:Media4{id:"3ac9c04bd451e508fd6368fb386c3c79",title:"Man beats machine: Korean Go player pips Google program",articleURL: "https://developer.manoramaonline.com/api/editions/en/articles/3ac9c04bd451e508fd6368fb386c3c79",lastModified: "Monday , March 14 2016 18:54"})
+
+CREATE (m5:Media5{id:"0f0c188a1d04eb388b289ffb0a83779e",title:"Google to shut down Picasa",articleURL: "https://developer.manoramaonline.com/api/editions/en/articles/0f0c188a1d04eb388b289ffb0a83779e",lastModified: "Sunday , February 14 2016 12:05"})
+
+CREATE (m6:Media6{id:"0ec50de916aaa57ce0a08fc90affa500",title:"Google to launch New Age virtual reality headset soon",articleURL: "https://developer.manoramaonline.com/api/editions/en/articles/0ec50de916aaa57ce0a08fc90affa500",lastModified: "Tuesday , February 09 2016 17:00"})
+
+CREATE (m7:Media7{id:"d10afb730bac02a7f41198a2950654c2",title:"WhatsApp shares user data with Facebook: should you be worried?",articleURL: "https://developer.manoramaonline.com/api/editions/en/articles/d10afb730bac02a7f41198a2950654c2",lastModified: "Sunday , June 26 2016 18:10"})
+
+CREATE (m8:Media8{id:"ee9b996c19c480a8f946704526ed1328",title:"Facebook to start using WhatsApp data for targeted advertising",articleURL: "https://developer.manoramaonline.com/api/editions/en/articles/ee9b996c19c480a8f946704526ed1328",lastModified: "Friday , April 01 2016 17:08"})
+
+CREATE (m9:Media9{id:"9ae3f71d9855f756f0d057c2164f5986",title:"Microsoft, Facebook to build transatlantic sub-sea cable",articleURL: "https://developer.manoramaonline.com/api/editions/en/articles/9ae3f71d9855f756f0d057c2164f5986",lastModified: "Monday , March 14 2016 18:54"})
+
+CREATE (m10:Media10{id:"d7dd7f3425c98565558b678d180f71df",title:"Have you tried the new 'Group Calling' option on Facebook Messenger?",articleURL: "https://developer.manoramaonline.com/api/editions/en/articles/d7dd7f3425c98565558b678d180f71df",lastModified: "Sunday , February 14 2016 12:05"})
+
+CREATE (m11:Media11{id:"cb8013b57f69b9be930f035c77e77a81",title:"Kollam student breaks FB, earns Rs 6.65L as bug bounty",articleURL: "https://developer.manoramaonline.com/api/editions/en/articles/cb8013b57f69b9be930f035c77e77a81",lastModified: "Tuesday , February 09 2016 17:00"})
+
+CREATE (m12:Media12{id:"f96936d426901854ff9a3f1f99527b3a",title:"Make Google search fun, try these 20 tricks",articleURL: "https://developer.manoramaonline.com/api/editions/en/articles/f96936d426901854ff9a3f1f99527b3a",lastModified: "Sunday , February 14 2016 12:06"})
+
+CREATE (m13:Media13{id:"e28a741655dcc819e30726636a183bab",title:"Android to have Indian dessert name?",articleURL: "https://developer.manoramaonline.com/api/editions/en/articles/e28a741655dcc819e30726636a183bab",lastModified: "Tuesday , February 09 2016 17:01"})
+
+-----------------------------------Creating Relationships between nodes base on the tags specified---------------------------------------------------
+MATCH (m1:Media1),(m2:Media2) CREATE (m1)-[r:rel_12{tag1:"Google Inc"}]->(m2)
+
+
+
+MATCH (m1:Media1),(m3:Media3) CREATE (m1)-[r:rel_13{tag1:"Google"}]->(m3)
+
+
+
+MATCH (m1:Media1),(m4:Media4) CREATE (m1)-[r:rel_14{tag1:"Google"}]->(m4)
+
+
+
+MATCH (m1:Media1),(m5:Media5) CREATE (m1)-[r:rel_15{tag1:"Google"}]->(m5)
+
+
+
+MATCH (m1:Media1),(m6:Media6) CREATE (m1)-[r:rel_16{tag1:"Google Inc"}]->(m6)
+
+
+
+MATCH (m2:Media2),(m7:Media7) CREATE (m2)-[r:rel_27{tag1:"Facebook"}]->(m7)
+
+
+
+MATCH (m2:Media2),(m8:Media8) CREATE (m2)-[r:rel_28{tag1:"Facebook"}]->(m8)
+
+
+
+MATCH (m2:Media2),(m9:Media9) CREATE (m2)-[r:rel_29{tag1:"Facebook"}]->(m9)
+
+
+
+MATCH (m2:Media2),(m10:Media10) CREATE (m2)-[r:rel_210{tag1:"Facebook"}]->(m10)
+
+
+
+MATCH (m2:Media2),(m11:Media11) CREATE (m2)-[r:rel_211{tag1:"Facebook"}]->(m11)
+
+
+MATCH (m3:Media3),(m4:Media4) CREATE (m3)-[r:rel_34{tag1:"Google"}]->(m4)
+
+
+
+MATCH (m3:Media3),(m5:Media5) CREATE (m3)-[r:rel_35{tag1:"Google"}]->(m5)
+
+
+
+MATCH (m3:Media3),(m12:Media12) CREATE (m3)-[r:rel_312{tag1:"Google"}]->(m12)
+
+
+
+MATCH (m3:Media3),(m1:Media1) CREATE (m3)-[r:rel_31{tag1:"Google"}]->(m1)
+
+
+
+MATCH (m3:Media3),(m13:Media13) CREATE (m3)-[r:rel_313{tag1:"Google"}]->(m13)
+
+
+
+MATCH (m4:Media4),(m3:Media3) CREATE (m4)-[r:rel_43{tag1:"Google"}]->(m3)
+
+
+
+MATCH (m4:Media4),(m5:Media5) CREATE (m4)-[r:rel_45{tag1:"Google"}]->(m5)
+
+
+
+MATCH (m4:Media4),(m12:Media12) CREATE (m4)-[r:rel_412{tag1:"Google"}]->(m12)
+
+
+
+MATCH (m4:Media4),(m1:Media1) CREATE (m4)-[r:rel_41{tag1:"Google"}]->(m1)
+
+
+
+MATCH (m6:Media6),(m2:Media2) CREATE (m6)-[r:rel_62{tag1:"Google Inc"}]->(m2)
+
+
+
+MATCH (m6:Media6),(m1:Media1) CREATE (m6)-[r:rel_61{tag1:"Google"}]->(m1)
+
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
